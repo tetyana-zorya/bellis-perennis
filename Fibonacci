@@ -1,0 +1,27 @@
+def fibonacci(length)
+
+  if length == 0
+    return []
+  elseif length == 1
+    return [1]
+  elseif length == 2
+    return [1,1]
+  end
+
+
+  array = [1,1]
+
+  while array.length < length
+    next_num = array[-2] + array[-1]
+  	array << next_num
+  end
+  return array
+end
+
+print fibonacci(0)
+puts
+print fibonacci(1)
+puts
+print fibonacci(6)
+puts
+print fibonacci(8) 
